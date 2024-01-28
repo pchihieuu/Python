@@ -1,3 +1,4 @@
+
 import math
 "1"
 
@@ -94,7 +95,8 @@ arrayMethod(param)
 
 "7"
 
-def showResult(a,b):
+
+def showResult(a, b):
     difference_A_B = a - b
     difference_B_A = b - a
     intersection_A_B = a.intersection(b)
@@ -108,4 +110,89 @@ def showResult(a,b):
 
 a = set(input("Nhập các phần tử của tập A: ").split())
 b = set(input("Nhập các phần tử của tập B: ").split())
-showResult(a,b)
+showResult(a, b)
+
+"8"
+
+
+def factorial(param):
+    fact = 1
+    if param < 0:
+        print("Khong co gia tri")
+    elif param == 0:
+        print("Giai thua cua 0 la 1")
+    else:
+        for i in range(1, param + 1):
+            fact = fact * i
+        print("Giai thua cua", param, "la", fact)
+
+
+n = (int)(input("Nhập số n :"))
+factorial(n)
+
+"9"
+
+
+def fibonacci(param):
+    a = 0
+    b = 1
+    count = 0
+    print("Day fibonacci")
+    while count < param:
+        print(a, end=" ")
+        temp = a + b
+        a = b
+        b = temp
+        count += 1
+    print(" ")
+
+
+n = (int)(input("Nhập số n :"))
+fibonacci(n)
+
+
+"10"
+
+
+def sumOfFloat(param):
+    a = 0.0
+    for i in range(1, param + 1):
+        print(i)
+        a = a + (1/i)
+    print("Result:", a)
+
+
+n = (int)(input("Nhập số n :"))
+sumOfFloat(n)
+
+"11"
+
+
+def USCLN(a, b):
+    while (a != b):
+        if (a > b):
+            a = a-b
+        else:
+            b = b - a
+    print("USCLN(a,b) = ", a)
+
+
+a = int(input("Nhập số a: "))
+b = int(input("Nhập số b: "))
+USCLN(a, b)
+
+
+"12"
+
+
+def getProfit(wallet, dream):
+    month = 0
+    while (wallet < dream):
+        wallet += wallet*0.03
+        month += 1
+    print("Bạn phải gửi trong", month, " tháng, lúc đó bạn sẽ được ", wallet)
+
+
+wallet = float(input("Số tiền hiện có: "))
+dream = float(input("Số tiền mơ ước: "))
+getProfit(wallet, dream)
